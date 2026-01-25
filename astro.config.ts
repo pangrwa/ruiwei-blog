@@ -10,6 +10,8 @@ import {
 } from "@shikijs/transformers";
 import { transformerFileName } from "./src/utils/transformers/fileName";
 import { SITE } from "./src/config";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,7 +22,12 @@ export default defineConfig({
     }),
   ],
   markdown: {
-    remarkPlugins: [remarkToc, [remarkCollapse, { test: "Table of contents" }]],
+    remarkPlugins: [
+      remarkMath,
+      remarkToc,
+      [remarkCollapse, { test: "Table of contents" }],
+    ],
+    rehypePlugins: [rehypeKatex],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },
@@ -60,12 +67,20 @@ export default defineConfig({
   experimental: {
     preserveScriptOrder: true,
     fonts: [
+      // {
+      //   name: "Google Sans Code",
+      //   cssVariable: "--font-google-sans-code",
+      //   provider: fontProviders.google(),
+      //   fallbacks: ["monospace"],
+      //   weights: [300, 400, 500, 600, 700],
+      //   styles: ["normal", "italic"],
+      // },
       {
-        name: "Google Sans Code",
-        cssVariable: "--font-google-sans-code",
+        name: "Arimo",
+        cssVariable: "--font-arimo", // This is the ID we use
         provider: fontProviders.google(),
-        fallbacks: ["monospace"],
-        weights: [300, 400, 500, 600, 700],
+        fallbacks: ["Arial", "sans-serif"],
+        weights: [400, 700],
         styles: ["normal", "italic"],
       },
     ],
