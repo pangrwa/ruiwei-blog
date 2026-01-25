@@ -51,10 +51,14 @@ int main() {
 Hello world
 </br>
 
->[!proof] He
 
-$\text{Graph}\rightarrow \text{H, MST} \to \text{H', H + M (Min-cost Perfect Matching)} \to \text{R, Tour with Repetitions} \to \text{T, Tour remove Repetitions}$
+> [!info] Hello info
+> Testing
 
+
+> [!proof]  hello
+
+> $\text{Graph}\rightarrow \text{H, MST} \to \text{H', H + M (Min-cost Perfect Matching)} \to \text{R, Tour with Repetitions} \to \text{T, Tour remove Repetitions}$
 
 $$
 \mathbf{P}(s) = \int_{0}^{\infty} e^{-st} \left[ \sum_{n=0}^{\infty} \frac{(\lambda t)^n e^{-\lambda t}}{n!} \cdot \mathcal{R}_n \right] dt + \oint_{\mathcal{C}} \frac{\nabla \times \mathbf{B}}{\mu_0 \varepsilon_0} \cdot d\mathbf{l}

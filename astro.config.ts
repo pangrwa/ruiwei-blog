@@ -13,6 +13,8 @@ import { SITE } from "./src/config";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
+import rehypeCallouts from "rehype-callouts";
+
 // https://astro.build/config
 export default defineConfig({
   site: SITE.website,
@@ -27,7 +29,20 @@ export default defineConfig({
       remarkToc,
       [remarkCollapse, { test: "Table of contents" }],
     ],
-    rehypePlugins: [rehypeKatex],
+    rehypePlugins: [
+      rehypeKatex,
+      [
+        rehypeCallouts,
+        {
+          theme: "obsidian",
+          callouts: {
+            proof: {
+              title: "proof",
+            },
+          },
+        },
+      ],
+    ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
       themes: { light: "min-light", dark: "night-owl" },

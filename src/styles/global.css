@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "./typography.css";
+@import 'rehype-callouts/theme/obsidian';
 
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
@@ -87,4 +88,42 @@ blockquote p::before,
 blockquote p::after {
   content: none !important;
 }
+
+
+
+.callout[data-callout="proof"] {
+  --callout-color: 196, 196, 196;
+  --callout-icon: lucide-lightbulb;
+  font-family: "Computer Modern", serif;
+}
+
+.callout-content {
+  white-space: pre-wrap;
+}
+
+/* KILL THE INVISIBLE TEXT BUG */
+.callout {
+  mix-blend-mode: normal !important; /* This overrides the 'darken' bug */
+  opacity: 1 !important;
+}
+
+html[data-theme="dark"] .callout-content,
+html[data-theme="dark"] .callout-content p {
+  /* Option 1: Use your theme's off-white (Recommended) */
+  color: var(--foreground) !important;
+}
+
+html[data-theme="dark"] .katex {
+  /* Brightens the math symbols */
+  color: var(--foreground);
+  /* Optional: slightly increase the thickness of the symbols */
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 0.5px var(--foreground); 
+}
+
+/* Target both inline and block math */
+html[data-theme="dark"] .katex {
+  color: #d1d9e0 !important;
+}
+
 
