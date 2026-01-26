@@ -14,6 +14,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
 import rehypeCallouts from "rehype-callouts";
+import wikiLinkPlugin from "@flowershow/remark-wiki-link";
 
 // https://astro.build/config
 export default defineConfig({
