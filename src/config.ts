@@ -1,5 +1,5 @@
 export const SITE = {
-  website: "https://astro-paper.pages.dev/", // replace this with your deployed domain
+  website: "https://pangrwa.github.io",
   author: "Rui Wei",
   profile: "https://github.com/pangrwa",
   desc: "A software engineer's blog",
@@ -20,4 +20,5 @@ export const SITE = {
   dir: "ltr", // "rtl" | "auto"
   lang: "en", // html lang code. Set this empty and default will be "en"
   timezone: "Asia/Singapore", // Default global timezone (IANA format) https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  base: "/ruiwei-blog",
 } as const;
