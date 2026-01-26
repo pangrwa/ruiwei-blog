@@ -3,11 +3,12 @@ author: Rui Wei
 pubDatetime: 2026-01-25T17:43:00Z
 modDatetime: 2026-01-25T17:43:00Z
 title: Hello Everyone
-slug: 
+slug:
 featured: false
 draft: false
 tags: []
 description: An introductory blog post
+imageNameKey: hello_everybody
 ---
 
 
@@ -71,3 +72,13 @@ $$
 \end{aligned}
 $$
 
+
+
+
+
+
+
+![](../../assets/images/hello_everybody.png)
+
+
+![../../assets/excalidraw/Hello Everyone 2026-01-26 13.22.46.excalidraw.png](../../assets/excalidraw/Hello%20Everyone%202026-01-26%2013.22.46.excalidraw.png)
