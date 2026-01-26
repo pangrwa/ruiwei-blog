@@ -9,11 +9,19 @@ draft: false
 tags: []
 description: An introductory blog post
 imageNameKey: hello_everybody
+
+csl: vancouver
 ---
 
 
 
 Hi everyone, welcome to my first blog post.
+
+
+- Supports standard citations [@Nash1950];
+
+
+[^1] LOl
 
 ## Markdown Test File with Text, Math, and Python
 
@@ -34,6 +42,8 @@ $$
 More text to separate the math. Integer feugiat scelerisque varius morbi enim nunc faucibus a. Aliquam sem et tortor consequat id porta nibh venenatis cras sed. Fusce ut placerat orci nulla pellentesque dignissim enim.
 
 Inline math again: $F = ma$, Newton’s second law, where $F$ is force, $m$ is mass, and $a$ is acceleration.
+
+In his famous book [@bishop2006],  Bishop ex
 
 ## Python Example 1
 
@@ -114,3 +124,7 @@ $$
 
 
 ![../../assets/excalidraw/Hello Everyone 2026-01-26 13.22.46.excalidraw.png](../../assets/excalidraw/Hello%20Everyone%202026-01-26%2013.22.46.excalidraw.png)
+
+
+[^1]: hello
+

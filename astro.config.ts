@@ -14,7 +14,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 
 import rehypeCallouts from "rehype-callouts";
-import wikiLinkPlugin from "@flowershow/remark-wiki-link";
+import rehypeCitation from "rehype-citation";
 
 // https://astro.build/config
 export default defineConfig({
@@ -42,6 +42,15 @@ export default defineConfig({
               title: "proof",
             },
           },
+        },
+      ],
+      [
+        rehypeCitation,
+        {
+          // bibliography:
+          //   "https://raw.githubusercontent.com/timlrx/rehype-citation/main/test/references-data.bib",
+          bibliography: "src/data/references.bib",
+          linkCitations: true,
         },
       ],
     ],

@@ -152,3 +152,46 @@ p:has(img[alt~="left"]),
 p:has(img[alt~="right"]) {
   display: flow-root;
 }
+
+
+
+
+/* 1. The Container & Separator */
+#refs.references {
+  border-top: 1px solid #e5e7eb; /* The line separator */
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  color: #6b7280;               /* Grey text */
+  font-size: 0.85rem;           /* Smaller font */
+  line-height: 1.6;
+}
+
+/* Add a "References" heading via CSS (Optional) */
+#refs::before {
+  content: "References";
+  display: block;
+  font-weight: bold;
+  font-size: 1rem;
+  color: #374151; /* Darker grey for the title */
+  margin-bottom: 0.5rem;
+}
+
+/* 2. Alignment for Vancouver Numbers */
+/* Vancouver usually puts the number in a div called .csl-left-margin */
+.csl-bib-body {
+  display: block;
+}
+
+.csl-entry {
+  display: flex;                /* Keeps number and text on the same line */
+}
+
+.csl-left-margin {
+  min-width: 1.5rem;            /* Ensures numbers don't push text around */
+  font-weight: 600;
+  color: #9ca3af;               /* Lighter grey for the number itself */
+}
+
+.csl-right-inline {
+  flex: 1;                      /* Takes up the remaining width */
+}
