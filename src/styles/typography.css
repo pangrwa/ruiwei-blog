@@ -25,6 +25,7 @@
     table,
     code {
       @apply text-foreground;
+      @apply leading-snug;
     }
 
     a {
@@ -119,5 +120,9 @@
 
   .prose .katex-display {
     @apply text-foreground;
+  }
+
+  html {
+    font-size: 15px;
   }
 }
