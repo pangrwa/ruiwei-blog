@@ -98,14 +98,80 @@ blockquote p::after {
   font-family: "Computer Modern", serif;
 }
 
+/* 2. Fix the Line Gaps & Indentation */
+/* We target the 'p' tag because Markdown wraps every line in one */
+.callout[data-callout="proof"] .callout-content p {
+  margin: 0 !important;             /* Kills the big vertical gaps */
+  white-space: pre-wrap !important;  /* Preserves the leading spaces/tabs */
+  display: block;                   /* Ensures each line is on its own row */
+  min-height: 1.2em;                /* Keeps empty lines from collapsing */
+}
+
+/* 3. Handle Lists (if you use bullets/numbers) */
+.callout[data-callout="proof"] li {
+  margin-bottom: 0px !important;
+}
+
+/* /* Target paragraphs inside any list inside the proof callout */ */
+/* .callout[data-callout="proof"] ol p, */
+/* .callout[data-callout="proof"] ul p { */
+/*   margin-top: 0 !important; */
+/*   margin-bottom: 0 !important; */
+/*   display: inline; /* This forces the paragraph to act like plain text */ */
+/* } */
+/**/
+/* /* Tighten the spacing between the list items themselves */ */
+/* .callout[data-callout="proof"] li { */
+/*   margin-bottom: 0px !important; /* Adjust this number to your liking */ */
+/* } */
+
 .callout-content {
   white-space: pre-wrap;
+}
+/* "Reset" lists so they don't inherit the double-spacing behavior */
+.callout-content :is(ol, ul, li) {
+    white-space: inherit;
 }
 
 /* KILL THE INVISIBLE TEXT BUG */
 .callout {
   mix-blend-mode: normal !important; /* This overrides the 'darken' bug */
   opacity: 1 !important;
+}
+
+/* Define the custom callout look */
+.callout[data-callout="algo"] {
+  --callout-color: 196, 196, 196;
+  --callout-icon: lucide-code;
+  font-family: "Computer Modern", serif;
+}
+
+/* Hide the bullets/numbers and remove gaps */
+/* .callout[data-callout="algo"] ul,  */
+.callout[data-callout="algo"] ul {
+  list-style-type: none !important;
+  margin: 0 !important;
+  padding-left: 1.5rem !important; /* This creates your indentation */
+  border-left: 1px solid rgba(196, 196, 196, 0.3); /* The vertical "scope" line */
+}
+
+/* Remove the line gaps between items */
+.callout[data-callout="algo"] li {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Ensure math and text stay tight */
+.callout[data-callout="algo"] li p {
+  display: inline;
+  margin: 0 !important;
+}
+
+/* The first level shouldn't have a border-left */
+/* .callout[data-callout="algo"] > .callout-content > ul, */
+.callout[data-callout="algo"] > .callout-content > ul {
+  border-left: none;
+  padding-left: 0 !important;
 }
 
 html[data-theme="dark"] .callout-content,

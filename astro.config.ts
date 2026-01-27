@@ -41,6 +41,9 @@ export default defineConfig({
             proof: {
               title: "proof",
             },
+            algo: {
+              title: "algo",
+            },
           },
         },
       ],
