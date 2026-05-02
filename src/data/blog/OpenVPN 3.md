@@ -170,6 +170,4 @@ In short, OpenVPN 3 brings a modern, modular approach to Linux VPNs. Instead of 
 1. renatolfc (GitHub Gist). A sample OpenVPN client configuration file in the unified format.<a href="https://gist.github.com/renatolfc/f6c9e2a5bd6503005676" target="_blank" rel="noopener noreferrer">https://gist.github.com/renatolfc/f6c9e2a5bd6503005676</a>
 <br>
  2. linuxrootroom (Medium). Why is /etc/resolv.conf Configured to Use 127.0.0.53 on Linux.<a href="https://medium.com/@linuxrootroom/dd-721dc2b25d1c" target="_blank" rel="noopener noreferrer">https://medium.com/@linuxrootroom/dd-721dc2b25d1c</a>
-<br>
- 3. ChatGPT. Shared Conversation. <a href="https://chatgpt.com/share/e/6999cc4f-531c-800b-9420-1256869fea3b" target="_blank" rel="noopener noreferrer">https://chatgpt.com/share/e/6999cc4f-531c-800b-9420-1256869fea3b</a>
 </div>

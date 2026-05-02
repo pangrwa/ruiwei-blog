@@ -5,8 +5,9 @@ modDatetime: 2026-02-06T18:09:22+08:00
 title: The C++ Phases of Translation
 slug:
 featured: false
-draft: false 
-tags: [c++]
+draft: false
+tags:
+  - cpp
 description: The C++ Phases of Translation
 imageNameKey: the_c++_phases_of_translation
 csl: vancouver
